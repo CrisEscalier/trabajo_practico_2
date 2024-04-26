@@ -1,6 +1,7 @@
 package ar.edu.unju.fi.ejercicio4.model;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 import ar.edu.unju.fi.ejercicio4.constantes.Posicion;
 
@@ -82,7 +83,8 @@ public class Jugador {
 	}
 
 	/**
-	 * Metodo que permite obtener una poscicion segun un numero
+	 * Metodo que permite obtener una posicion segun un numero
+	 * ingresado por el usuario
 	 * 
 	 * @param opcion para determinar una posicion
 	 * @return la posicion deseada
@@ -111,9 +113,19 @@ public class Jugador {
 	 */
 	public int calcularEdad(LocalDate fecha) {
 		LocalDate fechaActual = LocalDate.now();
+		Period periodo = Period.between(this.getFechaDeNacimiento(), fechaActual);
+		return periodo.getYears();
+	}
 
-		return fechaActual.minusYears(fecha.getYear()).minusMonths(fecha.getMonthValue())
-				.minusDays(fecha.getDayOfMonth()).getYear();
+	/**
+	 * Metodo para mostrar los datos del jaguador
+	 * 
+	 * @return Los datos del jugador en una cadena
+	 */
+	public String mostrarDatos() {
+		return "Jugador: " + nombre + " " + apellido + "\nFecha de nacimiento: " + fechaDeNacimiento
+				+ "\nNacionalidad: " + nacionalidad + "\nEstatura:" + estatura + "\nPeso: " + peso + "\nPosicion: "
+				+ posicion + "\n";
 	}
 
 }
