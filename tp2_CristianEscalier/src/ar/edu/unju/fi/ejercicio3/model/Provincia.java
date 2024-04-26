@@ -42,6 +42,5 @@ public enum Provincia {
     public double calcularDensidadPoblacional() {
         return (double) cantidadPoblacion / superficie;
     }
-	
-	
+
 }
