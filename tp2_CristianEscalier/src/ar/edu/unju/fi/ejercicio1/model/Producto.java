@@ -15,6 +15,7 @@ public class Producto {
 	private double precioUnitario;
 	private origenFabricacion origen;
 	private categoria cat;
+	private boolean estado;
 
 	public Producto() {
 	}
@@ -26,6 +27,18 @@ public class Producto {
 		this.precioUnitario = precioUnitario;
 		this.origen = obtenerOrigenDeFabricacion(origenOpcion);
 		this.cat = obtenerCategoria(origenOpcion);
+		this.estado = false;
+	}
+	
+	public Producto(int codigo, String descripcion, double precioUnitario, origenFabricacion origen, categoria cat,
+			boolean estado) {
+		super();
+		this.codigo = codigo;
+		this.descripcion = descripcion;
+		this.precioUnitario = precioUnitario;
+		this.origen = origen;
+		this.cat = cat;
+		this.estado = estado;
 	}
 
 	public int getCodigo() {
@@ -66,6 +79,16 @@ public class Producto {
 
 	public void setCategoria(categoria categoria) {
 		this.cat = categoria;
+	}
+	
+	
+
+	public boolean isEstado() {
+		return estado;
+	}
+
+	public void setEstado(boolean estado) {
+		this.estado = estado;
 	}
 
 	public categoria obtenerCategoria(int opcion) {

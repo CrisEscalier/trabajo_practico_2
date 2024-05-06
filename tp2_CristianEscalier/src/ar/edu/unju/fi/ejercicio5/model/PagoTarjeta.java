@@ -47,7 +47,7 @@ public class PagoTarjeta implements Pago {
 	public void imprimirRecibo() {
 		System.out.println("Numero de tarjeta: " + numeroDeTarjeta);
 		System.out.println("Fecha de pago: " + fechaDePago);
-		System.out.println("MontoPagado: " + montoPagado);
+		System.out.println("Monto Pagado: $ " + montoPagado);
 	}
 	
 

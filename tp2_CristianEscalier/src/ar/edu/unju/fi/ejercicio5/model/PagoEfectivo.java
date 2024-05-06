@@ -36,7 +36,7 @@ public class PagoEfectivo implements Pago{
 	@Override
 	public void imprimirRecibo() {
 		System.out.println("Fecha de Pago: " + fechaDePago);
-		System.out.println("Monto pagado: " + montoPagado);
+		System.out.println("Monto pagado: $ " + montoPagado);
 	}
 
 }
