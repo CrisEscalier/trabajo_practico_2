@@ -31,10 +31,8 @@ public class Main {
 		do {
 			menu();
 			try {
-
 				opcion = sc.nextInt();
 				sc.nextLine();
-
 			} catch (Exception e) {
 				opcion = 0;
 				mensajeDeError();
